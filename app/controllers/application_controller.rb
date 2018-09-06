@@ -31,17 +31,17 @@ class ApplicationController < Sinatra::Base
   get '/posts/:id' do
     @post = Post.find(params[:id])
     erb :show
-
-    redirect "/posts/#{params[:id]}"
   end
 
   get '/posts/:id/edit' do
     @post = Post.find(params[:id])
     erb :edit
+
+    redirect "/posts/#{params[:id]}"
   end
 
   patch '/posts/:id' do
-    
+
     erb :show
   end
 
