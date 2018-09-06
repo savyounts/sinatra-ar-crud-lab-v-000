@@ -36,8 +36,6 @@ class ApplicationController < Sinatra::Base
   get '/posts/:id/edit' do
     @post = Post.find(params[:id])
     erb :edit
-
-    redirect "/posts/#{@post.id}"
   end
 
   patch '/posts/:id' do
