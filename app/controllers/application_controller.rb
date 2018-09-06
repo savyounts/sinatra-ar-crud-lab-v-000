@@ -44,5 +44,5 @@ class ApplicationController < Sinatra::Base
     @post = post
     erb :show
   end
-  
+
 end
