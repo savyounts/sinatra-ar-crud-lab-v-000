@@ -7,5 +7,6 @@ class Post < ActiveRecord::Base
   def initialize(params)
     @name = params[:name]
     @content = params[:content]
+    @@all << self
   end
 end
